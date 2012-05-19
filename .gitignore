@@ -14,3 +14,4 @@
 /log/*.log
 /tmp
 /id_rsa*
+config/database.yml
