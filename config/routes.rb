@@ -1,5 +1,5 @@
 Hoku::Application.routes.draw do
-  resources :users
+  resources :users, :identities
   
   root :to => "users#index"
   # The priority is based upon order of creation:
