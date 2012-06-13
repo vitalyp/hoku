@@ -1,5 +1,20 @@
 <center>
     <div class="velum">
-      <img src="/images/under_construction.jpg" alt="under construction">
+      <img src="under_construction.jpg" alt="under construction">
     </div>
 </center>
+
+
+<script type="text/javascript"> 
+function startAnim() {
+    $("img").fadeOut(5000, function(){
+        $("img").fadeIn(3000);
+    });
+    startAnim();
+}
+
+$(document).ready(function(){
+    startAnim();
+});
+</script>
+
