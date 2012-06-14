@@ -1,7 +1,7 @@
 <div id="left_widget" style="margin-top: 20px; text-align: center; width:100px; height: 400px; background-color:#EEEEEE; display:inline-block; border-right: 1px solid black; border-bottom: 5px double black; border-top: 1px solid black; border-left: 1px solid black; float: left; border-radius: 20px;">
-  Календарик
+  Календарь
   <input type="text" style="width:80px; margin-bottom: 20px;" id="datepicker"/>
-  Этапы
+  Этапы TDD
   <select style="width:80px; margin-bottom: 20px;">
     <option value="volvo">Дизайн ПО</option>
     <option value="saab">Проектирование ПО</option>
@@ -18,29 +18,36 @@
 </div>
 
 <div id="accordion" style="display: inline-block; float: right; width: 200px; margin-top: 20px; font-size: 10px;">
-	<h3><a href="#">Факультеты</a></h3>
+	<h3><a href="#">Следующие задачи</a></h3>
 	<div>
-          <p>Ф-1</p>
-          <p>Ф-2</p>
-          <p>Ф-3</p>
+          <p>1. Добавить чат</p>
+          <p>2. Добавить регистрацию</p>
+          <p>3. Типы пользователей</p>
+          <p>4. Создать <a href="http://ru.wikipedia.org/wiki/%D0%93%D0%B8%D0%B1%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F_%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8">итерационный</a> план</p>
 	</div>
-	<h3><a href="#">Предметы</a></h3>
+	<h3><a href="#">Заметки</a></h3>
 	<div>
-          <p>П-1</p>
-          <p>П-2</p>
-          <p>П-3</p>
-          <p>П-4</p>
+          <p>1. Соединиться с Amazon</p>
+          <p>2. Настроить безопасный трансфер файлов (HTTPS протокол)</p>
+          <p>3. Postmark API</p>
+          <p>4. Social Networks</p>
+          <p>5. <a href="www.apptrajectory.com">www.apptrajectory.com</a></p>
 	</div>
-	<h3><a href="#">Курсы</a></h3>
+	<h3><a href="#">Стоимость оплаты</a></h3>
 	<div>
-          <p>К-1</p>
+          <p>Web-Development (Senor Ruby on Rails developer)</p>
           <ul>
-            <li>I</li>
-            <li>II</li>
-            <li>III</li>
+            <li>Итерационная</li>
+            <li>Поквартальная</li>
+            <li>Иная</li>
+            <li>Учет рисков, предоплата и т.д.</li>
           </ul>
 	</div>
 </div>
+
+<!--<div style="display: inline-block; float: right; width: 100px; margin-top: 20px; font-size: 10px;">
+    
+</div>-->
 
 <center style="">
     <span id="span1" style="width: 100px;"><%= link_to "Создайте аккаунт", "/auth/identity/register" %></span> или
