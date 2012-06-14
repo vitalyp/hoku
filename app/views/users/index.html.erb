@@ -8,12 +8,40 @@
     <option value="mercedes">Имплементация ПО</option>
     <option value="audi">Тестирование ПО</option>
   </select>
+
+    
   Разработчик:
   <%= image_tag(gravatar_url_for 'ariekdev@gmail.com')%>
   <%= image_tag(gravatar_url_for('ariekdev@gmail.com'), { :width => 80, :height => 80 }) %>
   <div style="margin-top: 50px">2012</div>
 
 </div>
+
+<div id="accordion" style="display: inline-block; float: right; width: 200px; margin-top: 20px; font-size: 10px;">
+	<h3><a href="#">Факультеты</a></h3>
+	<div>
+          <p>Ф-1</p>
+          <p>Ф-2</p>
+          <p>Ф-3</p>
+	</div>
+	<h3><a href="#">Предметы</a></h3>
+	<div>
+          <p>П-1</p>
+          <p>П-2</p>
+          <p>П-3</p>
+          <p>П-4</p>
+	</div>
+	<h3><a href="#">Курсы</a></h3>
+	<div>
+          <p>К-1</p>
+          <ul>
+            <li>I</li>
+            <li>II</li>
+            <li>III</li>
+          </ul>
+	</div>
+</div>
+
 <center style="">
     <span id="span1" style="width: 100px;"><%= link_to "Создайте аккаунт", "/auth/identity/register" %></span> или
     <span id="span2" style=""><%= link_to "зайдите в систему", "/auth/identity" %></span> используя персональный пароль.
@@ -22,6 +50,7 @@
       <img id="cover" src="/images/under_construction.jpg" alt="under construction" style="display:none;">
     </div>
 </center>
+
 
 
 <script type="text/javascript">
@@ -76,6 +105,7 @@ function startAnim() {
 
 $(document).ready(function(){
     $( "#datepicker" ).datepicker();
+    $("#accordion").accordion();
     startAnim();
 });
 
