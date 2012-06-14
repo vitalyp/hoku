@@ -1,23 +1,84 @@
-<center>
-    <%= link_to "Создайте аккаунт", "/auth/identity/register" %> или
-    <%= link_to "зайдите в систему", "/auth/identity" %> используя персональный пароль.
+<div id="left_widget" style="margin-top: 20px; text-align: center; width:100px; height: 400px; background-color:#EEEEEE; display:inline-block; border-right: 1px solid black; border-bottom: 5px double black; border-top: 1px solid black; border-left: 1px solid black; float: left; border-radius: 20px;">
+  Календарик
+  <input type="text" style="width:80px; margin-bottom: 20px;" id="datepicker"/>
+  Этапы
+  <select style="width:80px; margin-bottom: 20px;">
+    <option value="volvo">Дизайн ПО</option>
+    <option value="saab">Проектирование ПО</option>
+    <option value="mercedes">Имплементация ПО</option>
+    <option value="audi">Тестирование ПО</option>
+  </select>
+  Разработчик:
+  <%= image_tag(gravatar_url_for 'ariekdev@gmail.com')%>
+  <%= image_tag(gravatar_url_for('ariekdev@gmail.com'), { :width => 80, :height => 80 }) %>
+  <div style="margin-top: 50px">2012</div>
+
+</div>
+<center style="">
+    <span id="span1" style="width: 100px;"><%= link_to "Создайте аккаунт", "/auth/identity/register" %></span> или
+    <span id="span2" style=""><%= link_to "зайдите в систему", "/auth/identity" %></span> используя персональный пароль.
 
     <div class="velum">
-      <img src="/images/under_construction.jpg" alt="under construction">
+      <img id="cover" src="/images/under_construction.jpg" alt="under construction" style="display:none;">
     </div>
 </center>
 
 
-<script type="text/javascript"> 
+<script type="text/javascript">
+
+$('#span1').mouseover(function(){
+    $(this).animate({
+      opacity: 0.25,
+      "font-size":"20px"
+      //height: 'toggle'
+    }, 100, function(){
+      $(this).animate({
+        opacity: 1
+        //height: 'toggle'
+        }, 100)
+    });
+});
+$('#span1').mouseout(function(){
+    $(this).animate({
+      opacity: 1,
+      "font-size":"16px"
+      //height: 'toggle'
+    }, 100)});
+
+$('#span1').click(function(){
+  alert("Регистрация пользователей работает исключительно в демонстрационном режиме");
+});
+$('#span2').mouseover(function(){
+    $(this).animate({
+      opacity: 0.25,
+      "font-size":"20px"
+      //height: 'toggle'
+    }, 100, function(){
+      $(this).animate({
+        opacity: 1
+        //height: 'toggle'
+        }, 100)
+    });
+});
+$('#span2').mouseout(function(){
+    $(this).animate({
+      opacity: 1,
+      "font-size":"16px"
+      //height: 'toggle'
+    }, 100)});
+
 function startAnim() {
-    $("img").fadeOut(5000, function(){
-        $("img").fadeIn(3000);
+    $("#cover").fadeIn(5000, function(){
+        //$("img").fadeIn(3000);
     });
     startAnim();
 }
 
 $(document).ready(function(){
+    $( "#datepicker" ).datepicker();
     startAnim();
 });
+
+
 </script>
 
