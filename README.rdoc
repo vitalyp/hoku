@@ -1,3 +1,41 @@
+== Install and run RVM with bundler on Windows
+orig: link:https://www.drupal.org/node/2138087
+
+* Last updated February 15, 2015. Created on November 18, 2013.
+
+
+Unlike on UNIX based systems, installing and configuring RVM on a Windows machine properly in order to be able to use the new possibilities in Drupal's Omega 4 theme could become a difficult task. But running that process through the cygwin environment makes it possible.
+
+Installing cygwin and required dependencies
+Make sure you install the 32-bit version of cygwin, as otherwise you could get errors when trying to compile your ruby when installing it through rvm. So Install cygwin with following packages and their dependencies:
+
+    automake, bison, colorgcc, curl, gcc-g++, gcc-core, git, git-completion, git-gui,
+    git-svn, gitk, libreadline7, libtool, libyaml-devel, libyaml0_2, make, mercurial,
+    mingw64-i686-gcc-g++, nano, ncurses, openssh, openssl, openssl-devel, patch, readline,
+    unzip, zlib, zlib-devel, sqlite3, mingw64-x86_64-gcc
+
+
+====Installing RVM
+Open cygwin's command prompt and start the installation of RVM with the following command:
+    curl -L https://get.rvm.io | bash -s stable
+
+This should download and install RVM in your in /home/user01/.rvm/ directory. So far so good. Just type
+    rvm -v
+to ensure that RVM is installed. If you have installed ruby on your Windows machine previously - e.g. through something like Ruby Installer - I recommend to go ahead and uninstall it, as you will be managing your rubies through rvm from now on anyway.
+
+====Check that all cygwin requirements for RVM are installed. Run:
+    rvm requirements 
+
+If you need to install additional requirements and sends you an error listing the missing requirements then install those requirements using the cygwin setup.exe again, then run:
+    rvm requirements 
+and you should get the message:
+    Checking requirements for cygwin.
+    Requirements installation successful.
+
+So now if you type `ruby -v`
+
+you should get something like "ruby not found", which we will change very soon.
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
